@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>tlchecking List</h1>
+<table>
+    <tr>
+        <th>id</th>
+  <th>Developer_Name</th>
+        <th>Task_Id</th>
+  <th>Ticket_Name</th>
+        <th>Ticket_Id</th>
+        <th>Dev_sign</th>
+        <th>Approve</th>
+        <th>Denied</th>
+
+    </tr>
+
+    {% for i in value %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Developer_Name}}</td>
+         <td>{{i.Task_Id}}</td>
+        <td>{{i.Ticket_Name}}</td>
+        <td>{{i.Ticket_Id}}</td>
+        <td>{{i.Dev_des}}</td>
+
+        <td>
+            <a href="/tlapprove/{{i.id}}">Tlapprove</a></td>
+           <td> <a href="/tldenied/{{i.id}}">Tldenied</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</form>
+
+
+</body>
+</html>

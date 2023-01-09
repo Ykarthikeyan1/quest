@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Quest Tracker</h1>
+
+
+<h3>View Task</h3>
+<table border="1">
+    <tr>
+        <th>Project_Id</th>
+        <th>Project_Name</th>
+        <th>Description</th>
+        <th>Task_Id</th>
+        <th>Task_name</th>
+        <th>Ticket_Id</th>
+        <th>Ticket_name</th>
+        <th>Assigned_date</th>
+        <th>Deadline_date</th>
+        <th>Assigned_to</th>
+        <th>Dev_sign</th>
+        <th>Status</th>
+        <th>Action</th>
+
+    </tr>
+
+    {% for i in a %}
+    <tr>
+        <td>{{i.0}}</td>
+        <td>{{i.1}}</td>
+        <td>{{i.2}}</td>
+        <td>{{i.3}}</td>
+        <td>{{i.4}}</td>
+        <td>{{i.5}}</td>
+        <td>{{i.6}}</td>
+        <td>{{i.7}}</td>
+        <td>{{i.8}}</td>
+        <td>{{i.9}}</td>
+        <td>{{i.10}}</td>
+        <td>{{i.11}}</td>
+        <td><a href="/view/{{i.0}}/{{i.3}}/{{i.5}}/{{i.9}}/">view</a></td>
+
+
+
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+</body>
+</html>

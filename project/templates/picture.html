@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+  Picture
+</h1>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+  <table>
+      <tr>
+          <td>
+              <lable>Name</lable>
+          </td>
+          <td>
+              <input type="text" name="name">
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <lable>User</lable>
+          </td>
+          <td>
+              <input type="text" name="user">
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <lable>Picture</lable>
+          </td>
+          <td>
+              <input type="file" name="photo">
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <input type="submit" value="Upload">
+          </td>
+      </tr>
+
+  </table>
+</form>
+</body>
+</html>

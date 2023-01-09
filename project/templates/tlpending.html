@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Pending Project To Assin</h1>
+<table>
+    <tr>
+        <th>Id</th>
+  <th>Project_Name</th>
+    <th>Description</th>
+  <th>Assigned_Date</th>
+  <th>Deadline_Date</th>
+  <th>Action</th>
+  <th>Complete</th>
+
+
+    </tr>
+
+    {% for i in value %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Project_Name}}</td>
+        <td>{{i.Description}}</td>
+        <td>{{i.Assigned_Date}}</td>
+        <td>{{i.Deadline_Date}}</td>
+        <td>
+            <a href="/taskregister/{{i.id}}">Task_Register</a>
+
+        </td>
+        <td>
+            <a href="/projectcompleted/{{i.id}}">Completed</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% if a %}
+{% for i in value %}
+<form method="post">
+    {% csrf_token %}
+    <table>
+
+    <tr><td><label>Project_id</label></td>
+        <td><label >{{i.id}}</label></td></tr>
+    <tr><td><label>Project_Name</label></td>
+        <td><label>{{i.Project_Name}}</label></td></tr>
+    <tr><td><label>Description</label></td>
+        <td><label>{{i.Description}}</label></td></tr>
+    <tr><td><label>Assigned_Date</label></td>
+        <td><label >{{i.Assigned_Date}}</label></td></tr>
+    <tr><td><label>Deadline_Date</label></td>
+        <td><label >{{i.Deadline_Date}}</label></td></tr>
+    <tr><td><label>Task_Name</label></td>
+        <td><input type="text" name="task"></td></tr>
+    <tr>
+      <td>
+        <input type="submit" name="Submit">
+      </td>
+    </tr>
+</table>
+    {% endfor %}
+{% endif %}
+<br>
+    <table>
+    <tr>
+        <td>
+             <a href="/tlcheking/">checking</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+             <a href="/ticketpending/">Ticket_pending</a>
+        </td>
+    </tr>
+
+</table>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    Details
+</h1>
+<h3>Project Details</h3>
+<table>
+    <tr>
+        <th>Id</th>
+  <th>Project_Name</th>
+    <th>Description</th>
+  <th>Assigned_Date</th>
+  <th>Deadline_Date</th>
+
+
+
+    </tr>
+
+    {% for i in value %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Project_Name}}</td>
+        <td>{{i.Description}}</td>
+        <td>{{i.Assigned_Date}}</td>
+        <td>{{i.Deadline_Date}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+<h3>Task details</h3>
+<table>
+    <tr>
+        <th>Id</th>
+  <th>Project_Id</th>
+    <th>Task_Id</th>
+  <th>Task_name</th>
+
+
+
+
+    </tr>
+
+    {% for i in a %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Project_Id}}</td>
+        <td>{{i.Task_Id}}</td>
+        <td>{{i.Tasks_Name}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+<h3> Ticket details</h3>
+<table>
+    <tr>
+        <th>id</th>
+  <th>Developer_Name</th>
+        <th>Task_Id</th>
+  <th>Ticket_Name</th>
+        <th>Ticket_Id</th>
+        <th>Dev_sign</th>
+
+
+    </tr>
+
+    {% for i in b %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Developer_Name}}</td>
+         <td>{{i.Task_Id}}</td>
+        <td>{{i.Ticket_Name}}</td>
+        <td>{{i.Ticket_Id}}</td>
+        <td>{{i.Dev_des}}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+<h3> Developer Details</h3>
+<table>
+    <tr>
+        <th>Id</th>
+  <th>Name</th>
+        <th>Address</th>
+  <th>Username</th>
+        <th>Password</th>
+
+
+    </tr>
+
+    {% for i in c %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.Name}}</td>
+         <td>{{i.Address}}</td>
+        <td>{{i.Username}}</td>
+        <td>{{i.Password}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
